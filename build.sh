@@ -20,8 +20,21 @@ function fetch_git ()
         cd ..
     fi
 }
+git_edu_repo=https://github.com/scu-covariant
+function fetch_git_edu ()
+{
+    if [ ! -d "$1" ]; then
+        git clone $git_edu_repo/$1
+    else
+        cd $1
+        git fetch
+        git pull
+        git clean -dfx
+        cd ..
+    fi
+}
 fetch_git cspkg &
-fetch_git covscript &
+fetch_git_edu covscript &
 fetch_git covscript-regex &
 fetch_git covscript-codec &
 fetch_git covscript-darwin &

@@ -2,7 +2,7 @@
 mkdir build-cache
 cd build-cache
 call:git_fetch cspkg
-call:git_fetch covscript
+call:git_fetch_edu covscript
 call:git_fetch covscript-regex
 call:git_fetch covscript-codec
 call:git_fetch covscript-darwin
@@ -30,5 +30,16 @@ if exist %1% (
     cd ..
 ) else (
     git clone https://github.com/covscript/%1%
+)
+goto:eof
+:git_fetch_edu
+if exist %1% (
+    cd %1%
+    git fetch
+    git pull
+    git clean -dfx
+    cd ..
+) else (
+    git clone https://github.com/scu-covariant/%1%
 )
 goto:eof
