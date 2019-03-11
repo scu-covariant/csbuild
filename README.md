@@ -1,4 +1,5 @@
-# Covariant Script Official Build System
+# Covariant Script Official Build System(Education Edition)
+**Cautious!DO NOT INSTALL Different Edition Together!**  
 [![Build Status](https://travis-ci.org/scu-covariant/csbuild.svg?branch=master)](https://travis-ci.org/scu-covariant/csbuild)
 ## Supported Platform
 1. Microsoft Windows (Win32)
