@@ -24,5 +24,5 @@ echo "Maintainer: Michael Lee <mikecovlee@163.com>">>./$2/DEBIAN/control
 echo "Description: Covariant Script Programming Language(Education Edition)">>./$2/DEBIAN/control
 echo >>./$2/DEBIAN/control
 chmod -R 755 ./$2/DEBIAN
-dpkg-deb -b $2 covscript-$3-$2.deb
+dpkg-deb -b $2 covscript-edu-$3-$2.deb
 rm -rf $2
